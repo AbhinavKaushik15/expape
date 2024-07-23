@@ -10,7 +10,6 @@ function Navbar() {
   const { scrollYProgress } = useScroll();
 
   scrollYProgress.on("change", (data) => {
-    // console.log(Math.floor(data * 100));
     switch (Math.floor(data * 100)) {
       case 23:
         setTxtColor(() => !txtColor);
