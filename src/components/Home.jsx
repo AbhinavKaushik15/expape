@@ -1,10 +1,23 @@
 import { easeInOut, motion } from "framer-motion";
-import React from "react";
+import gsap, { ScrollTrigger } from "gsap/all";
+import React, { useRef } from "react";
 import { FiArrowDown } from "react-icons/fi";
 
 function Home() {
+
+  const parent = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  var tl = gsap.timeline({
+    scrollTrigger:{
+      trigger: parent.current,
+      
+    } 
+  })
+
   return (
-    <div className="relative w-full h-[160vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
+    <div ref={parent} className="relative w-full h-[160vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
       <div className="picture w-full h-full overflow-hidden">
         <img
           data-scroll

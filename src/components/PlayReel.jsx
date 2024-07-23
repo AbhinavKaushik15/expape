@@ -34,7 +34,7 @@ function PlayReel() {
       ease: easeIn,
     }, 'a')
     tl.to(playSm.current, {
-      x: '-122%',
+      x: '-160%',
       ease: easeIn,
     }, 's')
     tl.to(reelBig.current, {
@@ -42,7 +42,7 @@ function PlayReel() {
       ease: easeIn,
     }, 'a')
     tl.to(reelSm.current, {
-      x: '122%',
+      x: '160%',
       ease: easeIn,
     }, 's')
   })
@@ -67,7 +67,7 @@ function PlayReel() {
             <p className='text-[3.6vw] sm:text-xs font-[500] sm:font-[600]'>Work in motion</p>
           </div>
 
-          <div className="centerPlayReelSm flex sm:hidden absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[25vw]">
+          <div className="centerPlayReelSm flex sm:hidden absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[3vw]">
             <h1 ref={playSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Play</h1>
             <h1 ref={reelSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
           </div>

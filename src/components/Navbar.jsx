@@ -1,15 +1,42 @@
-import { easeInOut, motion } from "framer-motion";
-import React, { useContext } from "react";
+import { easeInOut, motion, useScroll } from "framer-motion";
+import React, { useContext, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { contextMenu } from "../App";
 
 function Navbar() {
-
   const [isOpen, setisOpen] = useContext(contextMenu);
+  const [txtColor, setTxtColor] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+
+  scrollYProgress.on("change", (data) => {
+    // console.log(Math.floor(data * 100));
+    switch (Math.floor(data * 100)) {
+      case 23:
+        setTxtColor(() => !txtColor);
+        break;
+
+      case 58:
+        setTxtColor();
+        break;
+
+      case 76:
+        setTxtColor(() => !txtColor);
+        break;
+
+      case 98:
+        setTxtColor();
+        break;
+    }
+  });
 
   return (
     <div className="w-full fixed z-[999]">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%] text-white">
+      <div
+        className={`max-w-screen-xl mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%] ${
+          !txtColor ? "text-white" : "text-black"
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -61,8 +88,13 @@ function Navbar() {
           transition={{ duration: 1, ease: easeInOut }}
           className="flex sm:hidden items-center"
         >
-          <button onClick={()=>setisOpen(()=>!isOpen)} className="text-sm flex items-center">{isOpen === false ? 'Menu' : ''} <IoIosMenu className="text-3xl ml-3 hover:rotate-90 transition-all" /></button>
-          
+          <button
+            onClick={() => setisOpen(() => !isOpen)}
+            className="text-sm flex items-center"
+          >
+            {isOpen === false ? "Menu" : ""}{" "}
+            <IoIosMenu className="text-3xl ml-3 hover:rotate-90 transition-all" />
+          </button>
         </motion.div>
 
         <motion.div
