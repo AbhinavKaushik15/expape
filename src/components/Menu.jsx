@@ -20,6 +20,7 @@ function Menu() {
     else{
       gsap.to(menuOpen.current, {
         top: '-100%',
+        ease: [0.22, 1, 0.36, 1],
       })
     }
   }, [isOpen])
@@ -120,7 +121,7 @@ function Menu() {
             ></path>
           </svg>
 
-          <button onClick={()=>setisOpen(()=>!isOpen)} className="text-xs flex items-center">{isOpen === false ? "Menu" : "Close"} <IoCloseOutline className="text-2xl text-[#dadada] font-[100] hover:rotate-90 transition-all" /></button>
+          <button onClick={()=>setisOpen(!isOpen)} className="text-xs flex items-center">{isOpen === false ? "Menu" : "Close"} <IoCloseOutline className="text-2xl text-[#dadada] font-[100] hover:rotate-90 transition-all" /></button>
           
         </div>
 

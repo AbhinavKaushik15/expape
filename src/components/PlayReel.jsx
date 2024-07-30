@@ -22,29 +22,29 @@ function PlayReel() {
         scrub: 1,
       }
     })
-    tl.to(videodiv.current, {
-      width: "197.3%",
-      height: "100%",
-    }, 'a'),
     tl.to(videodivSm.current, {
       width: "100%",
-    }, 's'),
-    tl.to(playBig.current, {
-      x: '100%',
-      ease: easeIn,
-    }, 'a')
+    }, 'small'),
     tl.to(playSm.current, {
       x: '-160%',
       ease: easeIn,
-    }, 's')
-    tl.to(reelBig.current, {
-      x: '-100%',
-      ease: easeIn,
-    }, 'a')
+    }, 'small')
     tl.to(reelSm.current, {
       x: '160%',
       ease: easeIn,
-    }, 's')
+    }, 'small')
+    tl.to(videodiv.current, {
+      width: "197.3%",
+      height: "100%",
+    }, 'big'),
+    tl.to(playBig.current, {
+      x: '100%',
+      ease: easeIn,
+    }, 'big')
+    tl.to(reelBig.current, {
+      x: '-100%',
+      ease: easeIn,
+    }, 'big')
   })
 
   return (
@@ -77,13 +77,13 @@ function PlayReel() {
             <h1 ref={reelSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
           </div>
 
-          <div ref={videodivSm} className="bgVideo flex sm:hidden absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
+          {/* <div ref={videodivSm} className="bgVideo flex sm:hidden absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
             <video muted loop autoPlay className='w-full h-full object-cover' src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
-          </div>
+          </div> */}
 
-          <div ref={videodiv} className="bgVideo hidden sm:flex absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
+          {/* <div ref={videodiv} className="bgVideo hidden sm:flex absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
             <video muted loop autoPlay className='w-full h-full object-cover' src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
-          </div>
+          </div> */}
 
           <div className="bottomPara flex flex-col z-[1] items-center justify-center font-[500]">
             <p className='text-[3.7vw] sm:text-xs'>Our work is best experienced in motion. Don't</p>
