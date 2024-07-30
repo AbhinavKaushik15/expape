@@ -4,7 +4,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[95vh] sm:h-[111.5vh] pt-14 sm:pt-20 md:h-[138vh] lg:h-[140vh] xl:h-[124vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:-mb-[29.5vh]">
+    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[95vh] sm:h-[111.5vh] pt-14 sm:pt-20 md:h-[150vh] lg:h-[155vh] xl:h-[124vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:-mb-[29.5vh] md:-mb-[300px]">
       <div className="relative w-full pl-7 sm:pl-[7.9vw] flex mt-5">
         <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5">
           <video
@@ -15,7 +15,7 @@ function Footer() {
             src="https://www.exoape.com/video/video-6.mp4"
           ></video>
         </div>
-        <div className="absolute z-[999] ourStory leading-[1] top-10">
+        <div className="ourStory absolute z-[999] leading-[1] top-10">
           <h1 className="text-[12vw] sm:text-[10vw] overflow-hidden">
             <motion.span
               initial={{ rotate: 30, translateY: "50%", opacity: 0 }}
@@ -41,11 +41,11 @@ function Footer() {
         </div>
       </div>
 
-      <div className="para px-7 pb-5 sm:-mt-[5vw] sm:pl-[7.9vw]">
-        <p className="text-[4.3vw] sm:text-[1.69vw]">
+      <div className="para px-7 pb-3 sm:-mt-[5vw] sm:pl-[7.9vw]">
+        <p className="text-[3.5vw] sm:text-[1.69vw]">
           The story behind Exo Ape is one of
         </p>
-        <p className="text-[4.3vw] sm:text-[1.69vw]">
+        <p className="text-[3.5vw] sm:text-[1.69vw]">
           exploration, creativity and curiosity.
         </p>
       </div>
@@ -54,7 +54,7 @@ function Footer() {
         Our Story
       </a>
 
-      <div className="w-[90.6%] sm:w-[84%] border-[0.2px] mx-auto border-[#E0CCBB] mt-9"></div>
+      <div className="w-[90.6%] sm:w-[84%] border-[0.2px] mx-auto border-[#E0CCBB] mt-7"></div>
 
       <div className="btm flex items-center gap-[35vw] sm:gap-[12vw] px-7 sm:px-[7.9vw] mt-5 sm:mt-[4.5vw]">
         <div className="hidden sm:flex flex-col gap-[0.5vw]">

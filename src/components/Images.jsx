@@ -55,7 +55,7 @@ function Images() {
   return (
     <div
       ref={parent}
-      className="w-full h-[167vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden "
+      className="w-full h-[165vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden "
     >
       <div className="centerImg relative h-[60vw] sm:h-[44.62vw] w-[36vw] sm:w-[26vw] bg-black mt-[23vw] sm:mt-[8.5vw]">
         <div
@@ -134,8 +134,8 @@ function Images() {
           </h1>
         </div>
 
-        <div className="headingCenter font-[Lausanne_300] leading-[0.9] sm:leading-[1] mt-14 sm:mt-[2vw] flex flex-col text-center">
-          <h1 className="text-[16vw] sm:text-[10vw] font-[400] tracking-tight py-10 -mt-10 overflow-hidden">
+        <div className="headingCenter font-[Lausanne_300] leading-[0.9] sm:leading-[1] -mt-20 sm:mt-[2vw] flex flex-col text-center">
+          <h1 className="text-[16vw] sm:text-[10vw] font-[400] tracking-tight py-10 mt-14 overflow-hidden">
             <motion.span
               initial={{ rotate: 30, translateY: "50%", opacity: 0 }}
               whileInView={{ rotate: 0, translateY: 0, opacity: 1 }}
@@ -160,7 +160,7 @@ function Images() {
           </h1>
         </div>
 
-        <div className="paras flex sm:hidden flex-col items-center justify-center leading-[1.2] mt-14">
+        <div className="paras flex sm:hidden flex-col items-center justify-center leading-[1.2] mt-10">
           <p className="text-[5vw] tracking-tight">
             Find out more about our work
           </p>
@@ -179,7 +179,7 @@ function Images() {
           </p>
         </div>
 
-        <button className="font-[500] flex text-center mx-auto mt-[9vw] sm:mt-[3.4vw]">
+        <button className="font-[500] flex text-center mx-auto mt-[30px] sm:mt-[3.4vw]">
           <p className="text-[4.45vw] sm:text-[1.1vw] text-black font-[400] border-zinc-400 border-b-[.7px] sm:border-b-[.5px]">
             Browse all news
           </p>

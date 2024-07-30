@@ -19,7 +19,7 @@ function App() {
   return (
     <contextMenu.Provider value={[isOpen, setisOpen]}>
       <div className="w-full min-h-screen overflow-hidden">
-        <Menu />
+        {/* <Menu /> */}
         <Navbar />
         <Home />
         <White />
