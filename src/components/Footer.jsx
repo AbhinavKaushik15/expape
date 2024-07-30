@@ -4,9 +4,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[92vh] sm:h-[82vh] pt-14 sm:pt-0 md:h-[100vh] lg:h-[100vh] xl:h-[124vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:mb-0">
+    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[95vh] sm:h-[111.5vh] pt-14 sm:pt-20 md:h-[138vh] lg:h-[140vh] xl:h-[124vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:-mb-[29.5vh]">
       <div className="relative w-full pl-7 sm:pl-[7.9vw] flex mt-5">
-        <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5 ">
+        <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5">
           <video
             className="h-full w-full object-cover overflow-hidden"
             loop
@@ -58,12 +58,12 @@ function Footer() {
 
       <div className="btm flex items-center gap-[35vw] sm:gap-[12vw] px-7 sm:px-[7.9vw] mt-5 sm:mt-[4.5vw]">
         <div className="hidden sm:flex flex-col gap-[0.5vw]">
-          <a className="text-sm" href="#">
+          <a className="text-xs " href="#">
             Willem II Singel 8
           </a>
           <a className="text-sm whitespace-nowrap" href="#">
             6041 HS, Roermond
-          </a>
+          </a>  
           <a className="text-sm" href="#">
             The Netherlands
           </a>
@@ -73,31 +73,31 @@ function Footer() {
         </div>
 
         <div className="left flex flex-col sm:gap-[0.5vw]">
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Work
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Studio
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             News
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Contact
           </a>
         </div>
 
         <div className="text-sm right flex flex-col sm:gap-[0.5vw] sm:-ml-[1vw]">
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Behance
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Dribbble
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Twitter
           </a>
-          <a className="text-sm" href="#">
+          <a className="text-[13px]" href="#">
             Instagram
           </a>
         </div>

@@ -91,7 +91,7 @@ function Navbar() {
             onClick={() => setisOpen(() => !isOpen)}
             className="text-sm flex items-center"
           >
-            {isOpen === false ? "Menu" : ""}{" "}
+            {isOpen === false && "Menu"}
             <IoIosMenu className="text-3xl ml-3 hover:rotate-90 transition-all" />
           </button>
         </motion.div>
