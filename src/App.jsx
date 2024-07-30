@@ -11,6 +11,7 @@ import Menu from "./components/Menu";
 export const contextMenu = createContext(null);
 
 function App() {
+
   const locomotiveScroll = new LocomotiveScroll();
 
   const [isOpen, setisOpen] = useState(false);

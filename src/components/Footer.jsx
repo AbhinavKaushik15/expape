@@ -4,9 +4,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[90vh] sm:h-[82vh] md:h-[100vh] lg:h-[100vh] xl:h-[118vh] bg-[#070707] text-[#E0CCBB]">
+    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[92vh] sm:h-[82vh] pt-14 sm:pt-0 md:h-[100vh] lg:h-[100vh] xl:h-[124vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:mb-0">
       <div className="relative w-full pl-7 sm:pl-[7.9vw] flex mt-5">
-        <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5">
+        <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5 ">
           <video
             className="h-full w-full object-cover overflow-hidden"
             loop
@@ -22,7 +22,7 @@ function Footer() {
               whileInView={{ rotate: 0, translateY: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ ease: Power4.easeInOut, duration: 0.6 }}
-              className="inline-block origin-left"
+              className="inline-block origin-left xl:tracking-tight"
             >
               Our
             </motion.span>
@@ -33,7 +33,7 @@ function Footer() {
               whileInView={{ rotate: 0, translateY: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ ease: Power4.easeInOut, duration: 0.6 }}
-              className="inline-block origin-left"
+              className="inline-block origin-left xl:tracking-tight"
             >
               Story
             </motion.span>

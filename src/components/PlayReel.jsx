@@ -67,14 +67,14 @@ function PlayReel() {
             <p className='text-[3.6vw] sm:text-xs font-[500] sm:font-[600]'>Work in motion</p>
           </div>
 
-          <div className="centerPlayReelSm flex sm:hidden absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[3vw]">
-            <h1 ref={playSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Play</h1>
-            <h1 ref={reelSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
-          </div>
-
           <div className="centerPlayReelBig hidden sm:flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[40vw]">
             <h1 ref={playBig} className='text-[16vw] sm:text-[10vw] font-[400]'>Play</h1>
             <h1 ref={reelBig} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
+          </div>
+
+          <div className="centerPlayReelSm flex sm:hidden absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[3vw]">
+            <h1 ref={playSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Play</h1>
+            <h1 ref={reelSm} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
           </div>
 
           <div ref={videodivSm} className="bgVideo flex sm:hidden absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
