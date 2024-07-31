@@ -26,7 +26,7 @@ function Menu() {
   }, [isOpen])
 
   return (
-    <div ref={menuOpen} className="fixed top-[-100%] z-[9999] w-full h-screen bg-[#0D0E13] mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%]">
+    <div ref={menuOpen} className="fixed top-[-100%] z-[999] w-full h-screen bg-[#1e349f] mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%]">
       <div className="left hidden sm:flex relative h-[91vh] w-[37.7vw]">
 
         <svg
@@ -121,7 +121,10 @@ function Menu() {
             ></path>
           </svg>
 
-          <button onClick={()=>setisOpen(!isOpen)} className="text-xs flex items-center">{isOpen === false ? "Menu" : "Close"} <IoCloseOutline className="text-2xl text-[#dadada] font-[100] hover:rotate-90 transition-all" /></button>
+          <button onClick={()=>setisOpen(!isOpen)} className="text-xs flex items-center">
+            {isOpen === false ? "Menu" : "Close"}
+            <IoCloseOutline className="text-2xl text-[#dadada] font-[100] hover:rotate-90 transition-all" />
+          </button>
           
         </div>
 
