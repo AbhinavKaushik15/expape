@@ -27,11 +27,11 @@ function PlayReel() {
       height: "30%"
     }, 'small'),
     tl.to(playSm.current, {
-      x: '-135%',
+      x: '-133%',
       ease: easeIn,
     }, 'small')
     tl.to(reelSm.current, {
-      x: '135%',
+      x: '133%',
       ease: easeIn,
     }, 'small')
     tl.to(videodiv.current, {
