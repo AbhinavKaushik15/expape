@@ -26,7 +26,7 @@ function Menu() {
   }, [isOpen])
 
   return (
-    <div ref={menuOpen} className="fixed top-[-110%] z-[9999] w-full h-screen bg-[#0D0E13] mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%]">
+    <div ref={menuOpen} className="fixed top-[-100%] z-[9999] w-full h-screen bg-[#0D0E13] mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%]">
       <div className="left hidden sm:flex relative h-[91vh] w-[37.7vw]">
 
         <svg
