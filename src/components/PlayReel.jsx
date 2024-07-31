@@ -35,7 +35,7 @@ function PlayReel() {
       ease: easeIn,
     }, 'small')
     tl.to(videodiv.current, {
-      width: "197.3%",
+      width: "100%",
       height: "100%",
     }, 'big'),
     tl.to(playBig.current, {
@@ -50,7 +50,7 @@ function PlayReel() {
 
   return (
     <div ref={parent} className='w-full h-screen bg-[#0D0E13]'>
-        <div className='relative max-w-screen-sm mx-auto h-full text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]'>
+        <div className='relative max-w-screen-xl mx-auto h-full text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]'>
           <div className="centerHeading w-full z-[1] flex items-center justify-center gap-2">
             <svg
           className="w-[3vw] sm:w-[0.9vw]"
@@ -69,7 +69,7 @@ function PlayReel() {
           </div>
 
           <div className="centerPlayReelBig hidden sm:flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[999] items-center justify-center gap-[40vw]">
-            <h1 ref={playBig} className='text-[16vw] sm:text-[10vw] font-[400]'>Play</h1>
+            <h1 ref={playBig} className='x sm:text-[10vw] font-[400]'>Play</h1>
             <h1 ref={reelBig} className='text-[16vw] sm:text-[10vw] font-[400]'>Reel</h1>
           </div>
 
@@ -82,7 +82,7 @@ function PlayReel() {
             <video muted loop autoPlay className='w-full h-full object-cover' src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
           </div>
 
-          <div ref={videodiv} className="bgVideo hidden sm:flex absolute sm:w-[24vw] sm:h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
+          <div ref={videodiv} className="bgVideo hidden sm:flex absolute w-[24vw] h-[11.8vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video">
             <video muted loop autoPlay className='w-full h-full object-cover' src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
           </div>
 

@@ -30,7 +30,7 @@ function Navbar() {
   });
 
   return (
-    <div className="w-full fixed z-[999]">
+    <div className="w-full fixed z-[99]">
       <div
         className={`max-w-screen-xl mx-auto flex items-center justify-between py-5 sm:py-[3.5%] px-7 sm:px-[3.5%] ${
           !txtColor ? "text-white" : "text-black"
