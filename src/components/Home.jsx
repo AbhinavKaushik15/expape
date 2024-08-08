@@ -12,6 +12,7 @@ function Home() {
   const heading = useRef(null);
   const downArrow = useRef(null);
   const paratwo = useRef(null);
+  const studioBtn = useRef(null);
 
   useGSAP(()=>{
     var tl = gsap.timeline({
@@ -39,12 +40,16 @@ function Home() {
     }, "sm")
     .to(paratwo.current, {
       duration: 0.7,
-      y: -290,
+      y: -310,
+    }, "sm")
+    .to(studioBtn.current, {
+      duration: 0.7,
+      y: -310,
     }, "sm")
   })
 
   return (
-    <div ref={parent} className="relative w-full h-[100vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
+    <div ref={parent} className="relative w-full h-[120vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
       <div ref={SmImg} className="smallImg flex sm:hidden picture w-full h-full overflow-hidden">
         <img className="w-full h-full object-cover sm:object-center"
           src="https://a.storyblok.com/f/133769/1920x2716/5c24d6b467/exo-ape-hero-1.jpg/m/2400x3395/filters:quality(90)"
@@ -194,7 +199,7 @@ function Home() {
           </p>
         </div>
 
-        <button className="underline font-[500] mt-6 sm:px-[3vw] md:px-[4.5vw] sm:mt-[8vh] md:mt-[6vw] xl:mt-20 flex items-center -ml-[10px] xl:px-[5vw]">
+        <button ref={studioBtn} className="underline font-[500] mt-6 sm:px-[3vw] md:px-[4.5vw] sm:mt-[8vh] md:mt-[6vw] xl:mt-20 flex items-center -ml-[10px] xl:px-[5vw]">
           <span className="inline-block h-2 w-2 sm:h-[5.5px] sm:w-[5.5px] rounded-full border-[0.3px] border-[#dadada]"></span>
           <p className="ml-1 sm:text-[1.1vw]">The Studio</p>
         </button>
