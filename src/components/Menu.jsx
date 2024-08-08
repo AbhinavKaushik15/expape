@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { contextMenu } from "../App";
 import gsap, { Power4} from "gsap/all";
@@ -198,7 +198,6 @@ function Menu() {
           Now Hiring!
         </h1>
       </div>
-
     </div>
   );
 }

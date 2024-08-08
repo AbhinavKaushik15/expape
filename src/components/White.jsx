@@ -4,7 +4,7 @@ import React from "react";
 function White() {
   return (
     <div className="relative h-[610vw] sm:h-[190vw] lg:h-[325vh] xl:h-[396vh] w-full px-[2.8vw] xl:px-10">
-      <div className="max-w-scree-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <div className="flex sm:hidden items-center gap-3 mt-[22.5vw] ml-6">
           <svg
             className="w-5"

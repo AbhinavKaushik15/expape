@@ -3,7 +3,7 @@ import gsap, { Linear, Power4, ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 
 function Images() {
-  const parent = useRef(null);
+  const parentImg = useRef(null);
   const firstImg = useRef(null);
   const secondImg = useRef(null);
   const thirdImg = useRef(null);
@@ -13,7 +13,7 @@ function Images() {
     gsap.registerPlugin(ScrollTrigger);
     var tl = gsap.timeline({
       scrollTrigger: {
-        trigger: parent.current,
+        trigger: parentImg.current,
         start: "0 50%",
         scrub: 1,
       },
@@ -54,10 +54,10 @@ function Images() {
   
   return (
     <div
-      ref={parent}
-      className="w-full h-[152vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden "
+      ref={parentImg}
+      className="w-full h-[152vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="centerImg relative h-[60vw] sm:h-[44.62vw] w-[36vw] sm:w-[26vw] bg-black mt-[23vw] sm:mt-[8.5vw]">
+      <div className="centerImg relative h-[60vw] sm:h-[44.62vw] w-[36vw] sm:w-[26vw] mt-[23vw] sm:mt-[8.5vw]">
         <div
           ref={firstImg}
           className="lftTop absolute h-[19.5vw] sm:h-[17.5vw] w-[34vw] sm:w-[27vw] top-[19vw] sm:top-[13vw] -left-[26.5vw] sm:-left-[20vw]"

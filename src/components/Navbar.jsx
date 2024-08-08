@@ -2,6 +2,7 @@ import { easeInOut, motion, useScroll } from "framer-motion";
 import React, { useContext, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { contextMenu } from "../App";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setisOpen] = useContext(contextMenu);
@@ -88,7 +89,7 @@ function Navbar() {
           className="flex sm:hidden items-center"
         >
           <button
-            onClick={() => setisOpen(() => !isOpen)}
+            onClick={() => setisOpen(!isOpen)}
             className="text-sm flex items-center"
           >
             {isOpen === false && "Menu"}
@@ -103,9 +104,9 @@ function Navbar() {
           className="links hidden sm:flex items-center gap-7"
         >
           {["Work", "Studio", "News", "Contact"].map((item, index) => (
-            <a className="text-[13px]" key={index} href="#">
+            <Link to={`/${item.toLowerCase()}`} className="text-[13px]" key={index}>
               {item}
-            </a>
+            </Link>
           ))}
         </motion.div>
       </div>
