@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import { easeInOut, motion } from "framer-motion";
 import gsap, { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
@@ -6,19 +7,52 @@ import { FiArrowDown } from "react-icons/fi";
 function Home() {
 
   const parent = useRef(null);
+  const SmImg = useRef(null);
+  const para = useRef(null);
+  const heading = useRef(null);
+  const downArrow = useRef(null);
+  const paratwo = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  var tl = gsap.timeline({
-    scrollTrigger:{
-      trigger: parent.current,
-      
-    } 
+  useGSAP(()=>{
+    var tl = gsap.timeline({
+      scrollTrigger:{
+        trigger: parent.current,
+        top: "0 0",
+        pin: true,
+        scrub: 2,
+      }
+    })
+    .to(para.current, {
+      y: -20,
+      opacity: 0,
+    }, "bg")
+    .to(heading.current, {
+      y: -20,
+      opacity: 0,
+    }, "bg")
+    .to(downArrow.current, {
+      y: -20,
+      opacity: 0,
+    }, "bg")
+    .to(SmImg.current,{
+      scale: 1.1,
+    }, "sm")
+    .to(paratwo.current, {
+      duration: 0.7,
+      y: -290,
+    }, "sm")
   })
 
   return (
-    <div ref={parent} className="relative w-full h-[160vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
-      <div className="picture w-full h-full overflow-hidden">
+    <div ref={parent} className="relative w-full h-[100vh] sm:h-[178.8vh] md:h-[240vh] xl:h-[299.4vh]">
+      <div ref={SmImg} className="smallImg flex sm:hidden picture w-full h-full overflow-hidden">
+        <img className="w-full h-full object-cover sm:object-center"
+          src="https://a.storyblok.com/f/133769/1920x2716/5c24d6b467/exo-ape-hero-1.jpg/m/2400x3395/filters:quality(90)"
+          alt=""
+        />
+      </div>
+
+      <div className="bigImg hidden sm:flex picture w-full h-full overflow-hidden">
         <img
           data-scroll
           data-scroll-speed="-1.6"
@@ -28,8 +62,11 @@ function Home() {
         />
       </div>
 
+
+
+
       <div className="landingtext absolute top-0 max-w-screen-xl h-full mx-auto px-7 sm:px-10 text-white">
-        <div className="parasSmall sm:hidden mt-[90%] leading-5">
+        <div ref={para} className="parasSmall sm:hidden mt-[90%] leading-5">
           {[
             "Global digital design studio partnering",
             "with brands and businesses that create",
@@ -83,7 +120,7 @@ function Home() {
           })}
         </div>
 
-        <div className="headingSmall sm:hidden text-5xl tracking-wide mt-5">
+        <div ref={heading} className="headingSmall sm:hidden text-5xl tracking-wide mt-5">
           {["Digital", "Design", "Experience"].map((item, index) => {
             return (
               <h1 key={index} className="font-[500] py-2 -mt-4 overflow-hidden">
@@ -126,11 +163,11 @@ function Home() {
           })}
         </div>
 
-        <div className="downArrow mt-7 sm:hidden">
+        <div ref={downArrow} className="downArrow mt-7 sm:hidden">
           <FiArrowDown className="text-md" />
         </div>
 
-        <div className="para2Small sm:hidden mt-[25px] leading-[1.3]">
+        <div ref={paratwo} className="para2Small sm:hidden mt-[25px] leading-[1.3]">
           <p className="font-[400]">We help experience-driven companies</p>
           <p className="font-[400]">thrive by making their audience feel the</p>
           <p className="font-[400]">refined intricacies of their brand and</p>
