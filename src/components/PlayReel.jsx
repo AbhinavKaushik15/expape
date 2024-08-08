@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import { easeIn } from "framer-motion";
 import gsap, { Power4, ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
@@ -14,10 +15,7 @@ function PlayReel() {
   const playBig = useRef(null);
   const reelBig = useRef(null);
 
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
+  useGSAP(()=>{
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: parentSm.current,
@@ -52,7 +50,6 @@ function PlayReel() {
     );
 
 
-    gsap.registerPlugin(ScrollTrigger);
 
     const  tlt = gsap.timeline({
       scrollTrigger: {
@@ -86,12 +83,12 @@ function PlayReel() {
       },
       "big"
     );
-  });
+  })
 
   return (
-    <div className="w-full">
+    <div className="min-w-screen-xl">
       <div ref={parentSm} className="flex sm:hidden w-full h-screen bg-[#0D0E13]">
-        <div className="relative max-w-screen-xl mx-auto h-full text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]">
+        <div className="relative mx-auto text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]">
           <div className="centerHeading w-full z-[1] flex items-center justify-center gap-2">
             <svg
               className="w-[3vw] sm:w-[0.9vw]"
@@ -106,7 +103,7 @@ function PlayReel() {
               ></path>
             </svg>
 
-            <p className="text-[3.6vw] sm:text-xs font-[500] sm:font-[600]">
+            <p className="text-[3.6vw] font-[500]">
               Work in motion
             </p>
           </div>
@@ -146,7 +143,7 @@ function PlayReel() {
 
 
       <div ref={parentBig} className="hidden sm:flex w-full h-screen bg-[#0D0E13]">
-        <div className="relative max-w-screen-xl mx-auto h-full text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]">
+        <div className="relative mx-auto text-white flex flex-col justify-between py-[22.5vw] sm:py-[3.8vw]">
           <div className="centerHeading w-full z-[1] flex items-center justify-center gap-2">
             <svg
               className="w-[3vw] sm:w-[0.9vw]"

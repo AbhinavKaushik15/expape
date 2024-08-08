@@ -55,7 +55,7 @@ function Images() {
   return (
     <div
       ref={parentImg}
-      className="w-full h-[152vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full h-[152vh] sm:h-[165vh] md:h-[185vh] lg:h-[220vh] xl:h-[275vh] bg-[#fff] flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="centerImg relative h-[60vw] sm:h-[44.62vw] w-[36vw] sm:w-[26vw] mt-[23vw] sm:mt-[8.5vw]">
         <div

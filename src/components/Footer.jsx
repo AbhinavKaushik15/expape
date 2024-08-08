@@ -4,7 +4,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div data-scroll data-scroll-speed="-0.7" className="relative z-[-1] w-full h-[95vh] sm:h-[111.5vh] pt-14 sm:pt-20 md:h-[150vh] lg:h-[155vh] xl:h-[146vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:-mb-[29.5vh] md:-mb-[300px] xl:mb-0">
+    <div data-scroll data-scroll-speed="-0.7"
+     className="relative z-[-1] w-full h-[95vh] sm:h-[111.5vh] pt-14 sm:pt-20 md:h-[150vh] lg:h-[155vh] xl:h-[146vh] bg-[#070707] text-[#E0CCBB] -mb-[13.5vh] sm:-mb-[29.5vh] md:-mb-[300px] xl:mb-0">
       <div className="relative w-full pl-7 sm:pl-[7.9vw] flex mt-5">
         <div className="vidoContainer relative w-[72vw] sm:w-[60vw] h-[34vw] sm:h-[30vw] ml-[23vw] sm:ml-[30.8vw] mt-5">
           <video
