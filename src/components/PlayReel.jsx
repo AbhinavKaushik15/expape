@@ -49,8 +49,6 @@ function PlayReel() {
       "sm"
     );
 
-
-
     const  tlt = gsap.timeline({
       scrollTrigger: {
         trigger: parentBig.current,
